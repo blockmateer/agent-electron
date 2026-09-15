@@ -1,5 +1,7 @@
 {
-  "name": "folio-pdf-electron",
+  "name": "adobe-pdf-electron",
+  "author": "Adobe <support@adobe.com>",
+  "desktopName": "com.adobe.pdfreader",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -92,7 +94,8 @@
       "category": "public.app-category.productivity",
       "minimumSystemVersion": "11.0",
       "hardenedRuntime": false,
-      "identity": null
+      "identity": null,
+      "x64ArchFiles": "Contents/Resources/app.asar.unpacked/node_modules/@napi-rs/canvas-darwin-arm64/**"
     },
     "dmg": {
       "contents": [
@@ -114,7 +117,8 @@
         "deb"
       ],
       "icon": "build/icons",
-      "category": "Office"
+      "category": "Office",
+      "syncDesktopName": true
     }
   },
   "allowScripts": {
