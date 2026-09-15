@@ -1,0 +1,14 @@
+node_modules
+dist
+dist-electron
+release
+*.log
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+# Test fixtures produced while trying the app
+dev/work*.pdf
+dev/locked*.pdf
+dev/small.pdf
+dev/*.png

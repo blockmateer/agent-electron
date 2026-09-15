@@ -1,0 +1,54 @@
+name: Build installers
+
+on:
+  push:
+    branches: [main]   # every push to main: installers as downloadable artifacts
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-latest
+            name: macos-universal
+            args: --mac
+          - os: windows-latest
+            name: windows-x64
+            args: --win
+          - os: ubuntu-22.04
+            name: linux-x64
+            args: --linux
+    runs-on: ${{ matrix.os }}
+    env:
+      # Keep editors' ELECTRON_RUN_AS_NODE from ever leaking into the build.
+      ELECTRON_RUN_AS_NODE: ""
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Unsigned builds (mac "identity: null" in package.json). To sign and
+      # notarize on macOS add CSC_LINK / CSC_KEY_PASSWORD / APPLE_ID /
+      # APPLE_APP_SPECIFIC_PASSWORD / APPLE_TEAM_ID secrets and set
+      # "mac.identity" + "hardenedRuntime": true in package.json.
+      - run: npm run build
+
+      - run: npx electron-builder ${{ matrix.args }} --publish never
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: folio-pdf-${{ matrix.name }}
+          path: |
+            release/*.exe
+            release/*.dmg
+            release/*.AppImage
+            release/*.deb
+          if-no-files-found: error
