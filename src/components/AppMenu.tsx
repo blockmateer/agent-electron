@@ -105,7 +105,7 @@ function useMenus(): Menu[] {
     },
     {
       label: "Help",
-      items: [{ label: "About Folio PDF", action: () => s.setModal({ kind: "about" }) }],
+      items: [{ label: "About Adobe PDF", action: () => s.setModal({ kind: "about" }) }],
     },
   ];
 }

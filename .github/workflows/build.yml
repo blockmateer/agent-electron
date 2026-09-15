@@ -45,7 +45,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: folio-pdf-${{ matrix.name }}
+          name: adobe-pdf-${{ matrix.name }}
           path: |
             release/*.exe
             release/*.dmg

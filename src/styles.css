@@ -1,9 +1,9 @@
 /* ---------- theme tokens ---------- */
 
 :root {
-  --accent: #1473e6;
-  --accent-strong: #0d5fc4;
-  --accent-soft: rgba(20, 115, 230, 0.12);
+  --accent: #eb1000;
+  --accent-strong: #c40000;
+  --accent-soft: rgba(235, 16, 0, 0.12);
   --danger: #d0342c;
 
   --bg-chrome: #f3f3f3;
@@ -20,13 +20,13 @@
   --shadow: 0 10px 30px rgba(15, 17, 26, 0.18);
   --ink: #2c2c2c; /* black pills / active underline */
   --ink-fg: #ffffff;
-  --brand-gradient: linear-gradient(90deg, #ed6865 0%, #766ee6 100%);
+  --brand-gradient: linear-gradient(90deg, #eb1000 0%, #ff6b6b 100%);
 }
 
 :root[data-theme="dark"] {
-  --accent: #4d97ef;
-  --accent-strong: #6aa9f4;
-  --accent-soft: rgba(77, 151, 239, 0.18);
+  --accent: #ff5252;
+  --accent-strong: #ff7070;
+  --accent-soft: rgba(255, 82, 82, 0.18);
 
   --bg-chrome: #26262a;
   --bg-panel: #2e2e33;
@@ -42,7 +42,7 @@
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   --ink: #f2f2f2;
   --ink-fg: #1b1b1e;
-  --brand-gradient: linear-gradient(90deg, #f0525d 0%, #e0409c 100%);
+  --brand-gradient: linear-gradient(90deg, #ff5252 0%, #eb1000 100%);
 }
 
 /* ---------- base ---------- */
@@ -1404,8 +1404,8 @@ input[type="checkbox"] {
   width: 56px;
   height: 56px;
   border-radius: 14px;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-  box-shadow: 0 8px 20px rgba(29, 78, 216, 0.3);
+  background: linear-gradient(135deg, #eb1000, #c40000);
+  box-shadow: 0 8px 20px rgba(196, 0, 0, 0.3);
   flex-shrink: 0;
 }
 .home__mark::after {

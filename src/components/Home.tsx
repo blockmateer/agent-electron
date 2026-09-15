@@ -13,7 +13,7 @@ export function Home() {
         <div className="home__hero">
           <div className="home__mark" aria-hidden="true" />
           <div>
-            <h1>Folio PDF</h1>
+            <h1>Adobe PDF</h1>
             <p>View, comment, organize, sign and combine PDF documents.</p>
           </div>
         </div>

@@ -13,9 +13,9 @@ export const HIGHLIGHT_COLORS = "yellow=#FFFF98,green=#53FFBC,blue=#80EBFF,pink=
 const AUTHOR_KEY = "folio.author";
 export function noteAuthor(): string {
   try {
-    return localStorage.getItem(AUTHOR_KEY) || "Folio user";
+    return localStorage.getItem(AUTHOR_KEY) || "Adobe user";
   } catch {
-    return "Folio user";
+    return "Adobe user";
   }
 }
 

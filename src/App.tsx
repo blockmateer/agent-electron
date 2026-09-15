@@ -33,7 +33,7 @@ export default function App() {
 
   // Window title reflects the active document.
   useEffect(() => {
-    setWindowTitle(active ? `${active.dirty ? "• " : ""}${active.name} — Folio PDF` : "Folio PDF");
+    setWindowTitle(active ? `${active.dirty ? "• " : ""}${active.name} — Adobe PDF` : "Adobe PDF");
   }, [active?.name, active?.dirty, active]);
 
   // Startup: files from the command line, second instances, drag & drop, close guard.

@@ -1,4 +1,4 @@
-# Folio PDF (Electron edition)
+# Adobe PDF (Electron edition)
 
 A lightweight desktop PDF viewer and editor for Windows, macOS and Linux, in the spirit of
 Acrobat's everyday features: view, comment, fill & sign, organize pages, combine and convert.
@@ -59,7 +59,7 @@ npm run dev              # Vite dev server + Electron with hot reload (add -- --
 npm run dev:debug        # same, with Chromium remote debugging on port 9224
 npm run typecheck        # renderer + main/preload
 npm run build            # dist/ (renderer) + dist-electron/ (main, preload)
-npm run dist:win         # release/Folio PDF-<version>-win-x64.exe (NSIS)
+npm run dist:win         # release/Adobe PDF-<version>-win-x64.exe (NSIS)
 npm run dist:mac         # release/*.dmg (universal; run on a Mac)
 npm run dist:linux       # release/*.AppImage, *.deb
 npm run sample           # regenerate dev/sample.pdf
@@ -80,7 +80,7 @@ In development the renderer also exposes `window.__folio` (`actions`, `viewers`,
 [.github/workflows/build.yml](.github/workflows/build.yml) builds the Windows, macOS
 (universal dmg) and Linux installers on every push to `main` (artifacts) and on `v*` tags.
 The macOS app is unsigned unless you add signing secrets (see the workflow comment); first
-launch needs right-click → *Open* or `xattr -cr "/Applications/Folio PDF.app"`.
+launch needs right-click → *Open* or `xattr -cr "/Applications/Adobe PDF.app"`.
 
 ### Layout
 

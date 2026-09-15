@@ -111,11 +111,11 @@ function InfoModal({ modal }: { modal: Extract<Modal, { kind: "info" }> }) {
 function AboutModal() {
   const close = () => useApp.getState().setModal(null);
   return (
-    <div className="modal" role="dialog" aria-label="About Folio PDF">
+    <div className="modal" role="dialog" aria-label="About Adobe PDF">
       <div className="about">
         <div className="home__mark" aria-hidden="true" />
         <div>
-          <h3>Folio PDF</h3>
+          <h3>Adobe PDF</h3>
           <p className="modal__text">Version 0.1.0</p>
         </div>
       </div>
