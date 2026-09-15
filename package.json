@@ -41,8 +41,8 @@
   "description": "A lightweight desktop PDF viewer and editor (Electron + React + pdf.js + pdf-lib).",
   "main": "dist-electron/main.cjs",
   "build": {
-    "appId": "com.folio.pdf",
-    "productName": "Folio PDF",
+    "appId": "com.adobe.pdf",
+    "productName": "Adobe PDF",
     "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
     "directories": {
       "output": "release",

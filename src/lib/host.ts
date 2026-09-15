@@ -57,12 +57,12 @@ export async function pickSavePath(defaultPath: string, filters = PDF_FILTER): P
   return (await host()?.saveDialog({ defaultPath, filters, title: "Save as" })) ?? null;
 }
 
-export async function confirmDialog(text: string, title = "Folio PDF"): Promise<boolean> {
+export async function confirmDialog(text: string, title = "Adobe PDF"): Promise<boolean> {
   const h = host();
   return h ? h.ask(text, title) : window.confirm(text);
 }
 
-export async function errorDialog(text: string, title = "Folio PDF"): Promise<void> {
+export async function errorDialog(text: string, title = "Adobe PDF"): Promise<void> {
   const h = host();
   if (h) await h.message(text, title);
   else window.alert(text);
