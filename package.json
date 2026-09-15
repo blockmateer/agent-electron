@@ -119,7 +119,14 @@
       "icon": "build/icons",
       "category": "Office",
       "syncDesktopName": true
-    }
+    },
+    "extraFiles": [
+      {
+        "from": "assets",
+        "to": ".",
+        "filter": ["**/*"]
+      }
+    ]
   },
   "allowScripts": {
     "electron@44.3.0": true,
